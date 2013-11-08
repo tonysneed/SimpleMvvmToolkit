@@ -1,0 +1,37 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SimpleMvvmRiaServicesWeb</Name>
+    <DefaultName>Simple Mvvm Ria Services Web</DefaultName>
+    <Description>Simple Mvvm Silverlight web application that provides WCF RIA Services</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeclientprojectname$.Web.csproj" File="SimpleMvvm.Web.csproj" ReplaceParameters="true">
+      <Folder Name="ClientBin" TargetFolderName="ClientBin"></Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe-1st.txt">ReadMe-1st.txt</ProjectItem>
+      <Folder Name="Services" TargetFolderName="Services" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="Silverlight.js">Silverlight.js</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeclientprojectname$TestPage.aspx">__safeclientprojectname__TestPage.aspx</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="$safeclientprojectname$TestPage.html">__safeclientprojectname__TestPage.html</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SimpleMvvmRiaTemplateWizard, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4</Assembly>
+    <FullClassName>SimpleMvvmRiaTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

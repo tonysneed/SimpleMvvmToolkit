@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+    <metadata>
+        <id>SimpleMvvmToolkit</id>
+		<version>5.0.0.0</version>
+        <title>Simple Mvvm Toolkit</title>
+        <authors>Tony Sneed</authors>
+        <owners>Tony Sneed</owners>
+        <licenseUrl>http://simplemvvmtoolkit.codeplex.com/license</licenseUrl>
+        <projectUrl>http://simplemvvmtoolkit.codeplex.com</projectUrl>
+        <iconUrl>http://tonysneed.com/images/mvvm/simple-icon-sm.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Helper classes for building WPF, Silverlight, Windows Store and Windows Phone applications using the Model-View-ViewModel pattern.</description>
+        <language>en-US</language>
+        <tags>mvvm simplemvvm wpf silverlight windowsstore win8 winrt windowsphone wp7 wp8</tags>
+        <dependencies>
+            <group targetFramework="win81">
+                <dependency id="Microsoft.Composition" version="1.0.17" />
+            </group>
+        </dependencies>
+    </metadata>
+</package>

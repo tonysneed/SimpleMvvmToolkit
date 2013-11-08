@@ -1,0 +1,73 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Simple Mvvm Ria Services Client</Name>
+    <DefaultName>SimpleMvvmRiaServicesClient</DefaultName>
+    <Description>Simple Mvvm Silverlight client that consumes WCF RIA Services</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SimpleMvvm.csproj" File="SimpleMvvm.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Styles.xaml">Styles.xaml</ProjectItem>
+      </Folder>
+      <Folder Name="Locators" TargetFolderName="Locators">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ViewModelLocator.cs">ViewModelLocator.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MockItems-Temp.cs">MockItems-Temp.cs</ProjectItem>
+      <Folder Name="Other" TargetFolderName="Other">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MessageTokens.cs">MessageTokens.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PageNames.cs">PageNames.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AppManifest.xml">AppManifest.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe-2nd.txt">ReadMe-2nd.txt</ProjectItem>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="IItemListServiceAgent.cs">IItemListServiceAgent.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemListServiceAgent.cs">ItemListServiceAgent.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MockItemListServiceAgent.cs">MockItemListServiceAgent.cs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModels" TargetFolderName="ViewModels">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemDetailViewModel.cs">ItemDetailViewModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemListViewModel.cs">ItemListViewModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainPageViewModel.cs">MainPageViewModel.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ErrorWindow.xaml">ErrorWindow.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ErrorWindow.xaml.cs">ErrorWindow.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.xaml">Home.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Home.xaml.cs">Home.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemDetailView.xaml">ItemDetailView.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemDetailView.xaml.cs">ItemDetailView.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemListView.xaml">ItemListView.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ItemListView.xaml.cs">ItemListView.xaml.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SimpleMvvmRiaTemplateWizard, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4</Assembly>
+    <FullClassName>SimpleMvvmRiaTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension"
+              repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
+      <package id="SilverlightToolkit-Core" version="4.2010.4" />
+      <package id="SimpleMvvmToolkit" version="5.0.0.0" />
+    </packages>
+  </WizardData>	
+</VSTemplate>

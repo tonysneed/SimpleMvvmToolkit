@@ -1,0 +1,22 @@
+﻿<controls:ChildWindow xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="MvvmMessaging.ApproveIncreaseView"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="200" 
+           Title="Approve Increase">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <toolkit:WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Do you approve the increase of " FontSize="16"/>
+            <TextBlock Name="quantityText" FontSize="16"/>
+            <TextBlock Text=" for " FontSize="16"/>
+            <TextBlock Name="customerText" FontSize="16"/>
+            <TextBlock Text="?" FontSize="16"/>
+        </toolkit:WrapPanel>
+        <Button x:Name="noButton" Content="No" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" Click="noButton_Click" />
+        <Button x:Name="yesButton" Content="Yes" Width="75" Height="23" HorizontalAlignment="Left" Margin="224,12,0,0" Grid.Row="1" Click="yesButton_Click" />
+    </Grid>
+</controls:ChildWindow>

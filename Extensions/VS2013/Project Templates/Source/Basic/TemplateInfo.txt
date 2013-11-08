@@ -1,0 +1,4 @@
+Template Name: SimpleMvvmSilverlight
+Template Description: Silverlight application using Simple Mvvm Toolkit
+Icon Image: C:\Source\SimpleMvvmToolkit\Extensions\Templates\Misc\Template Images\simple-icon-sm.png
+Preview Image: C:\Source\SimpleMvvmToolkit\Extensions\Templates\Misc\Template Images\simple-preview.png
