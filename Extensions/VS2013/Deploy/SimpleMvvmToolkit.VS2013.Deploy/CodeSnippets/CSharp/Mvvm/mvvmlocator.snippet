@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <SnippetTypes>
+        <SnippetType>Expansion</SnippetType>
+      </SnippetTypes>
+      <Title>ViewModel Locator Property</Title>
+      <Author>Tony Sneed</Author>
+      <Description>ViewModel Locator Property</Description>
+      <HelpUrl>
+      </HelpUrl>
+      <Shortcut>mvvmlocator</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal Editable="true">
+          <ID>ViewModelName</ID>
+          <ToolTip>Name of the view-model</ToolTip>
+          <Default>MyViewModel</Default>
+          <Function>
+          </Function>
+        </Literal>
+        <Literal Editable="true">
+          <ID>ServiceAgentName</ID>
+          <ToolTip>Name of the service agent</ToolTip>
+          <Default>MyServiceAgent</Default>
+          <Function>
+          </Function>
+        </Literal>
+      </Declarations>
+      <Code Language="CSharp"><![CDATA[// Create $ViewModelName$ on demand
+public $ViewModelName$ $ViewModelName$
+{
+    get
+    {
+        I$ServiceAgentName$ serviceAgent = new $ServiceAgentName$();
+        return new $ViewModelName$(serviceAgent);
+    }
+}$end$]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

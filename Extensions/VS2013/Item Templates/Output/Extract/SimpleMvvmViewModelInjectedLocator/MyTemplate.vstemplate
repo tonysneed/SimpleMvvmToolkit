@@ -1,0 +1,16 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <Name>Simple Mvvm ViewModelInjectedLocator.cs</Name>
+    <DefaultName>SimpleMvvmViewModelInjectedLocator</DefaultName>
+    <Description>View-model locator with injected service agents using Simple Mvvm Toolkit by Tony Sneed</Description>
+    <ProjectType>CSharp</ProjectType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>10</SortOrder>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+    <ProjectItem SubType="" TargetFileName="$fileinputname$.cs" ReplaceParameters="true">ViewModelInjectedLocatorTemplate.cs</ProjectItem>
+  </TemplateContent>
+</VSTemplate>

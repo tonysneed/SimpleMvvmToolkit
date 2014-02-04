@@ -1,0 +1,31 @@
+﻿Getting Started with Simple Mvvm Toolkit
+
+To get started with Simple Mvvm Toolkit, follow the step-by-step instructions
+listed in the Documentation section of the project web site on CodePlex:
+http://simplemvvmtoolkit.codeplex.com/wikipage?title=Getting%20Started.
+
+The toolkit supports creating applications using the Model-View-ViewModel
+design pattern which target a number of platforms:
+- Windows Presentation Foundation
+- Silverlight
+- Windows Store
+- Windows Phone
+- iOS (Xamarin)
+- Android (Xamarin)
+
+You can also create Portable Class Libraries with models and view models
+that can be referenced by any of the frameworks listed above.
+
+To aid development of MVVM applications, the toolkit includes a number
+of Visual Studio item and project templates, as well as a set of C# code 
+snippets and Xml snippets for use with XAML. And there is a set of helper
+classes deployed in a NuGet package.
+
+There are also screencasts listed here that you can watch to learn how
+to create your first project using the Simple Mvvm Toolkit.
+
+If you find a bug or issue, you can post it here:
+http://simplemvvmtoolkit.codeplex.com/workitem/list/basic
+
+If you have a question you would like addressed, you can post it to the
+discussion forum: http://simplemvvmtoolkit.codeplex.com/discussions
