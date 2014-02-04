@@ -19,9 +19,16 @@ namespace SimpleMvvmToolkit
         /// <summary>
         /// Protected constructor for ViewModelBase.
         /// </summary>
+#if XAMARIN
+        protected ViewModelBase()
+            : base(null, MessageBus.Default)
+        {
+        }
+#else
         protected ViewModelBase() : base(UIDispatcher.Current, MessageBus.Default)
         {
         }
+#endif
 
         /// <summary>
         /// Notification that errors have changed.
@@ -72,7 +79,7 @@ namespace SimpleMvvmToolkit
         private void InternalValidateProperty(string propertyName, object value)
         {
             ICollection<ValidationResult> results = new List<ValidationResult>();
-            #if NETFX_CORE
+            #if NETFX_CORE || PORTABLE || XAMARIN
             var context = new ValidationContext(this) { MemberName = propertyName };
             #else
             var context = new ValidationContext(this, null, null) { MemberName = propertyName };

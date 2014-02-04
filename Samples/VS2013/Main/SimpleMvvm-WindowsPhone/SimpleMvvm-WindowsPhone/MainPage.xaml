@@ -14,12 +14,6 @@
     SupportedOrientations="Portrait" Orientation="Portrait"
     shell:SystemTray.IsVisible="True">
 
-    <!-- Set Locator resource -->
-    <phone:PhoneApplicationPage.Resources>
-        <vm:ViewModelLocator xmlns:vm="clr-namespace:SimpleMvvm_WindowsPhone"
-                             x:Key="Locator" />
-    </phone:PhoneApplicationPage.Resources>
-
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent"
           DataContext="{Binding Source={StaticResource Locator}, Path=MainPageViewModel}">

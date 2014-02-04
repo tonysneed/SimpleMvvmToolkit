@@ -53,6 +53,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CopyVsixExtensionFiles>False</CopyVsixExtensionFiles>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -67,6 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="GettingStarted.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -75,15 +80,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelInjectedLocator.zip">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator.zip">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
-    <Content Include="Packages\Microsoft.Composition.1.0.17.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="ProjectTemplates\Silverlight\SimpleMvvmSilverlight.zip">
@@ -106,55 +104,112 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Packages\SimpleMvvmToolkit.5.0.0.0.nupkg">
-      <IncludeInVSIX>true</IncludeInVSIX>
-    </Content>
     <Content Include="Packages\SilverlightToolkit-Core.4.2010.4.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\XmlSnippets.pkgdef">
+    <Content Include="CodeSnippets\XmlSnippets.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\CSharpSnippets.pkgdef">
+    <Content Include="CodeSnippets\CSharpSnippets.pkgdef">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmcommand.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmcommand.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmcommandcanex.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmcommandcanex.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvminjectedlocator.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmlocator.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmlocator.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmlocatornosa.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmlocatornosa.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmprop.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmprop.snippet">
+    <Content Include="CodeSnippets\Xml\Mvvm\mvvmcontext.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmcontext.snippet">
+    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmtrigger.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmtrigger.snippet">
+    <Content Include="CodeSnippets\Xml\Mvvm\mvvmxmlns.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="Mvvm\mvvmxmlns.snippet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Content Include="Packages\MvvmCross.HotTuna.CrossCore.3.1.1-beta4.nupkg">
       <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\MvvmCross.PortableSupport.3.1.1-beta4.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\SimpleMvvmToolkit.5.5.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\SimpleMvvmToolkit.Portable.5.5.0.0.nupkg">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ProjectTemplates\Android\SimpleMvvmAndroid.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProjectTemplates\iOS\Universal\SimpleMvvmiOS.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProjectTemplates\Windows\SimpleMvvmPortable.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-MonoDroid.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-MonoTouch.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-WindowsStore.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-MonoDroid.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-MonoTouch.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-WindowsStore.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-MonoDroid.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-MonoTouch.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-WindowsStore.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProjectTemplates\Windows\SimpleMvvmMultiplatform.zip">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
@@ -164,6 +219,13 @@
     <Content Include="License.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ReadMe.txt">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="ReleaseNotes.txt">
+      <IncludeInVSIX>true</IncludeInVSIX>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="simple-icon-sm.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -192,6 +254,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimpleMvvmPortableTemplateWizard\SimpleMvvmPortableTemplateWizard.csproj">
+      <Project>{56368d6a-fdab-416a-b845-b8789ca1dfff}</Project>
+      <Name>SimpleMvvmPortableTemplateWizard</Name>
+      <VSIXSubPath>TemplateWizard</VSIXSubPath>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleMvvmRiaTemplateWizard\SimpleMvvmRiaTemplateWizard.csproj">
       <Project>{D67905F4-360D-4101-95A3-A76CA9616276}</Project>
       <Name>SimpleMvvmRiaTemplateWizard</Name>

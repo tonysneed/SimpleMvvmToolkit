@@ -57,7 +57,7 @@
   <WizardData>
     <packages repository="extension"
               repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
-      <package id="SimpleMvvmToolkit" version="5.0.0.0" />
+      <package id="SimpleMvvmToolkit" version="5.5.0.0" />
     </packages>
   </WizardData>	
 </VSTemplate>

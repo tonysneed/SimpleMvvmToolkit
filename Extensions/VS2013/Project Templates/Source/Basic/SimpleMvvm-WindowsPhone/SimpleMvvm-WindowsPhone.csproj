@@ -163,17 +163,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="SimpleMvvmToolkit-Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleMvvmToolkit.5.0.0.0\lib\windowsphone8\SimpleMvvmToolkit-Common.dll</HintPath>
+    <Reference Include="SimpleMvvmToolkit-Common">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.5.0.0\lib\windowsphone8\SimpleMvvmToolkit-Common.dll</HintPath>
     </Reference>
-    <Reference Include="SimpleMvvmToolkit-WindowsPhone-v8.0, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleMvvmToolkit.5.0.0.0\lib\windowsphone8\SimpleMvvmToolkit-WindowsPhone-v8.0.dll</HintPath>
+    <Reference Include="SimpleMvvmToolkit-WindowsPhone-v8.0">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.5.0.0\lib\windowsphone8\SimpleMvvmToolkit-WindowsPhone-v8.0.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SimpleMvvmToolkit.5.0.0.0\lib\windowsphone8\System.Windows.Interactivity.dll</HintPath>
+    <Reference Include="System.Windows.Interactivity, Version=3.9.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleMvvmToolkit.5.5.0.0\lib\windowsphone8\System.Windows.Interactivity.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

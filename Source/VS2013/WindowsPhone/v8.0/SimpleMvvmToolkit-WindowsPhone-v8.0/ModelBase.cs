@@ -20,10 +20,17 @@ namespace SimpleMvvmToolkit
         /// <summary>
         /// Public ctor required for serialization.
         /// </summary>
+#if PORTABLE
+        public ModelBase()
+            : base(null)
+        {
+        }
+#else
         public ModelBase()
             : base(UIDispatcher.Current)
         {
         }
+#endif
 
         readonly Dictionary<string, List<string>> _errors =
             new Dictionary<string, List<string>>();

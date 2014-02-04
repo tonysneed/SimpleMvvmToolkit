@@ -39,6 +39,9 @@ namespace Expression.Samples.Interactivity.DataHelpers
 
         private object value;
 
+        /// <summary>
+        /// Context.
+        /// </summary>
         public object Context
         {
             get;
@@ -48,6 +51,7 @@ namespace Expression.Samples.Interactivity.DataHelpers
         /// <summary>
         /// Constructor.
         /// </summary>
+        /// <param name="context">Context</param>
         /// <param name="changedHandler">Callback whenever the value of this binding has changed.</param>
         public BindingListener(object context, ChangedHandler changedHandler)
         {

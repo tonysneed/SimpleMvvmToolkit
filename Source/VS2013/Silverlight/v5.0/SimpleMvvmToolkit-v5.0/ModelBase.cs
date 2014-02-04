@@ -21,9 +21,16 @@ namespace SimpleMvvmToolkit
         /// <summary>
         /// Public ctor required for serialization.
         /// </summary>
+#if XAMARIN
+        public ModelBase()
+            : base(null)
+        {
+        }
+#else
         public ModelBase() : base(UIDispatcher.Current)
         {
         }
+#endif
 
         readonly Dictionary<string, List<string>> _errors =
             new Dictionary<string, List<string>>();
@@ -77,7 +84,7 @@ namespace SimpleMvvmToolkit
         private void InternalValidateProperty(string propertyName, object value)
         {
             ICollection<ValidationResult> results = new List<ValidationResult>();
-            #if NETFX_CORE
+            #if NETFX_CORE || XAMARIN
             var context = new ValidationContext(this) { MemberName = propertyName };
             #else
             var context = new ValidationContext(this, null, null) { MemberName = propertyName };

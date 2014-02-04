@@ -14,7 +14,6 @@ using Microsoft.VisualStudio.Web.Silverlight;
 namespace SimpleMvvmRiaTemplateWizard
 {
     // Root wizard used by root project vstemplate
-
     public class RootWizard : IWizard
     {
         // Fields

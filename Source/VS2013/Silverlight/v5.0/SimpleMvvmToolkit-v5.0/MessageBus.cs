@@ -12,10 +12,17 @@ namespace SimpleMvvmToolkit
         private static readonly object StaticLock = new object();
 
         // Prevent direct instantiation
+#if PORTABLE || XAMARIN
+        private MessageBus()
+            : base(null)
+        {
+        }
+#else
         private MessageBus()
             : base(UIDispatcher.Current)
         {
         }
+#endif
 
         /// <summary>
         /// Singleton of MessageBus.

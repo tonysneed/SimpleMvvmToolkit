@@ -18,10 +18,17 @@ namespace SimpleMvvmToolkit
         /// <summary>
         /// Protected constructor for ViewModelBase.
         /// </summary>
+#if PORTABLE
+        protected ViewModelBase()
+            : base(null, MessageBus.Default)
+        {
+        }
+#else
         protected ViewModelBase()
             : base(UIDispatcher.Current, MessageBus.Default)
         {
         }
+#endif
 
         /// <summary>
         /// Notification that errors have changed.

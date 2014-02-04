@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3" Version="5.0.1" Language="en-US" Publisher="Tony Sneed" />
+    <Identity Id="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3" Version="5.5.0" Language="en-US" Publisher="Tony Sneed" />
     <DisplayName>Simple Mvvm Toolkit for Visual Studio 2013</DisplayName>
-    <Description xml:space="preserve">Visual Studio templates and NuGet packages for building WPF, Silverlight, Windows Store and Windows Phone applications with the Model-View-ViewModel pattern.</Description>
-    <MoreInfo>http://simplemvvmtoolkit.codeplex.com/</MoreInfo>
+    <Description xml:space="preserve">Visual Studio templates and NuGet packages for building WPF, Silverlight, Windows Store, Windows Phone, iOS and Android applications with the Model-View-ViewModel pattern, including Portable Class Libraries with ViewModels that target all these platforms.</Description>
+    <MoreInfo>http://simplemvvmtoolkit.codeplex.com</MoreInfo>
     <License>License.txt</License>
+    <GettingStartedGuide>GettingStarted.txt</GettingStartedGuide>
+    <ReleaseNotes>ReleaseNotes.txt</ReleaseNotes>
     <Icon>simple-icon-sm.png</Icon>
     <PreviewImage>simple-preview.png</PreviewImage>
-    <Tags>mvvm simplemvvm wpf silverlight windows81 win81 winrt windowsphone8 wp8</Tags>
+    <Tags>mvvm simplemvvm wpf silverlight windows81 win81 winrt windowsphone8 wp8 ios andriod xamarian mvvmcross portable pcl</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0,13.0)" />
@@ -20,7 +22,6 @@
   </Dependencies>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator.zip" />
-    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelInjectedLocator.zip" />
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail.zip" />
     <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel.zip" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Windows Phone\SimpleMvvmWindowsPhone.zip" />
@@ -29,7 +30,21 @@
     <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="SimpleMvvmRiaTemplateWizard" d:VsixSubPath="TemplateWizard" Path="|SimpleMvvmRiaTemplateWizard|" AssemblyName="|SimpleMvvmRiaTemplateWizard;AssemblyName|" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Silverlight\SimpleMvvmRiaServices.zip" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Silverlight\SimpleMvvmSilverlight.zip" />
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Mvvm\CSharpSnippets.pkgdef" />
-    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="Mvvm\XmlSnippets.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="CodeSnippets\CSharpSnippets.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="File" Path="CodeSnippets\XmlSnippets.pkgdef" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Windows\SimpleMvvmPortable.zip" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Android\SimpleMvvmAndroid.zip" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\iOS\Universal\SimpleMvvmiOS.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-MonoDroid.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-MonoTouch.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModel-WindowsStore.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-MonoDroid.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-MonoTouch.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelDetail-WindowsStore.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-MonoDroid.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-MonoTouch.zip" />
+    <Asset Type="Microsoft.VisualStudio.ItemTemplate" d:Source="File" Path="ItemTemplates" d:TargetPath="ItemTemplates\Simple Mvvm\SimpleMvvmViewModelLocator-WindowsStore.zip" />
+    <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="Project" d:ProjectName="SimpleMvvmPortableTemplateWizard" d:VsixSubPath="TemplateWizard" Path="|SimpleMvvmPortableTemplateWizard|" AssemblyName="|SimpleMvvmPortableTemplateWizard;AssemblyName|" />
+    <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\Windows\SimpleMvvmMultiplatform.zip" />
   </Assets>
 </PackageManifest>

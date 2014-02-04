@@ -1,24 +1,10 @@
 Simple MVVM Toolkit To Do
 
-1. Portability
-   - Check portability of core PCL lib
-     > Update NuGet Pkg for: portable-net45+sl50+wp80+win
-     > Portable item templates:
-       Simple Mvvm Portable ViewModel, ViewModelDetail
-       Update MessageBaseCore - Current static prop (null dispatcher)
-   - Create example of portable view models
-   - Check WP8 compat -> NuGet pkg
-   - Add Xamarian support (iOS-Android)
-   
-2. VS 2013 Deployment
-   - Add Win Store Item Templates
-   - Add Portable project template
+1. Deployment
    - VS Express compatibility
-
-3. VS 2012 Deployment
    - Create VS 2012 VSIX installer
    - Create VS 2010 VSIX installer
    
-4. Samples
-   - Real-world: Repos, Trackable Entities
+2. Samples
+   - Web API service with Trackable Entities
    

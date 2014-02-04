@@ -17,9 +17,16 @@ namespace SimpleMvvmToolkit
         /// <summary>
         /// Protected constructor for ViewModelDetailBase.
         /// </summary>
+#if PORTABLE || XAMARIN
+        protected ViewModelDetailBase()
+            : base(null, MessageBus.Default)
+        {
+        }
+#else
         protected ViewModelDetailBase() : base(UIDispatcher.Current, MessageBus.Default)
         {
         }
+#endif
 
         /// <summary>
         /// Detail entity
