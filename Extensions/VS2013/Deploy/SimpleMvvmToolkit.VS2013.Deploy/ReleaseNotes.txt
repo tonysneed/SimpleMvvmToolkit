@@ -1,4 +1,4 @@
-Release Notes for Simple Mvvm Toolkit v5.5.0.0
+Release Notes for Simple Mvvm Toolkit v5.5.0.1
 
 There are two main enhancements for this release:
 1. Support for iOS and Android platforms with Xamarin and Mvvm Cross
@@ -49,6 +49,11 @@ There are two main enhancements for this release:
       iOS and Android projects
 	  > The Injected ViewModel Locator item template has now been deprecated
 	- Both .NET 4.5 and 4.51 are supported by the toolkit and NuGet packages
+	- v5.5.0.1 of the VSIX installer added back support for snippets for CSharp code
+	  and XAML. Note that if you are using ReSharper, you will need to select
+	  RESHARPER, Options, Environment, Intellisense, General, and select Visual Studio.
+	  In XAML press Ctrl+K, Ctrl+X to view and insert the Mvvm snippets. In C# code you
+	  can simply type the snippet shortcut (for ex, mvvmprop) and press Tab.
  
  4. Known issues:
     - For some reason XAML parsing errors may appear in the Windows Store and Windows Phone

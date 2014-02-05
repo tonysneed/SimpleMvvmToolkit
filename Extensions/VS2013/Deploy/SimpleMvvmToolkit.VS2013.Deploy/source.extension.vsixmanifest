@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3" Version="5.5.0" Language="en-US" Publisher="Tony Sneed" />
+    <Identity Id="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3" Version="5.5.0.1" Language="en-US" Publisher="Tony Sneed" />
     <DisplayName>Simple Mvvm Toolkit for Visual Studio 2013</DisplayName>
     <Description xml:space="preserve">Visual Studio templates and NuGet packages for building WPF, Silverlight, Windows Store, Windows Phone, iOS and Android applications with the Model-View-ViewModel pattern, including Portable Class Libraries with ViewModels that target all these platforms.</Description>
     <MoreInfo>http://simplemvvmtoolkit.codeplex.com</MoreInfo>

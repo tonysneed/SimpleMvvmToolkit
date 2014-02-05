@@ -135,15 +135,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="CodeSnippets\Xml\Mvvm\mvvmcontext.snippet">
+    <Content Include="CodeSnippets\Xaml\Mvvm\mvvmcontext.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="CodeSnippets\CSharp\Mvvm\mvvmtrigger.snippet">
+    <Content Include="CodeSnippets\Xaml\Mvvm\mvvmtrigger.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Content Include="CodeSnippets\Xml\Mvvm\mvvmxmlns.snippet">
+    <Content Include="CodeSnippets\Xaml\Mvvm\mvvmxmlns.snippet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>

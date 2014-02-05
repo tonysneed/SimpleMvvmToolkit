@@ -17,14 +17,14 @@
         <Literal Editable="true">
           <ID>ParameterName</ID>
           <ToolTip>Parameter Name</ToolTip>
-          <Default>&lt;object&gt;</Default>
+          <Default>object</Default>
           <Function>
           </Function>
         </Literal>
         <Literal Editable="true">
           <ID>FieldName</ID>
           <ToolTip>Field Name</ToolTip>
-          <Default>myMethod</Default>
+          <Default>_myMethod</Default>
           <Function>
           </Function>
         </Literal>
@@ -36,10 +36,10 @@
           </Function>
         </Literal>
       </Declarations>
-      <Code Language="CSharp"><![CDATA[private DelegateCommand$ParameterName$ $FieldName$Command;
-public DelegateCommand$ParameterName$ $MethodName$Command
+      <Code Language="csharp"><![CDATA[private DelegateCommand<$ParameterName$> $FieldName$Command;
+public DelegateCommand<$ParameterName$> $MethodName$Command
 {
-    get { return $FieldName$Command ?? ($FieldName$Command = new DelegateCommand$ParameterName$($MethodName$)); }
+    get { return $FieldName$Command ?? ($FieldName$Command = new DelegateCommand<$ParameterName$>($MethodName$)); }
     private set { $FieldName$Command = value; }
 }]]></Code>
     </Snippet>
