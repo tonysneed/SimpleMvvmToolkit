@@ -1,0 +1,60 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SimpleMvvmPortableAndroid</Name>
+    <Description>Portable Android application using Simple Mvvm Toolkit</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Simple Mvvm</ProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SimpleMvvmPortableAndroid</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SimpleMvvm-Portable-Android.csproj" File="SimpleMvvm-Portable-Android.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Activity1.cs">Activity1.cs</ProjectItem>
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AboutAssets.txt">AboutAssets.txt</ProjectItem>
+      </Folder>
+      <Folder Name="Framework" TargetFolderName="Framework">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BindingSetup.cs">BindingSetup.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AndroidManifest.xml">AndroidManifest.xml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe.txt">ReadMe.txt</ProjectItem>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AboutResources.txt">AboutResources.txt</ProjectItem>
+        <Folder Name="Drawable" TargetFolderName="Drawable">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Icon.png">Icon.png</ProjectItem>
+        </Folder>
+        <Folder Name="Layout" TargetFolderName="Layout">
+          <ProjectItem ReplaceParameters="false" TargetFileName="Main.axml">Main.axml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Resource.Designer.cs">Resource.Designer.cs</ProjectItem>
+        <Folder Name="Values" TargetFolderName="Values">
+          <ProjectItem ReplaceParameters="true" TargetFileName="MvxBindingAttributes.xml">MvxBindingAttributes.xml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Strings.xml">Strings.xml</ProjectItem>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SimpleMvvmPortableTemplateWizard, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4</Assembly>
+    <FullClassName>SimpleMvvmPortableTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension"
+              repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
+      <package id="SimpleMvvmToolkit.Portable" version="5.5.0.0" />
+      <package id="MvvmCross.PortableSupport" version="3.1.1-beta4" />
+      <package id="MvvmCross.HotTuna.CrossCore" version="3.1.1-beta4" />
+    </packages>
+  </WizardData>	
+</VSTemplate>

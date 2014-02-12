@@ -1,0 +1,49 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>Simple Mvvm Multiplatform Solution</Name>
+    <DefaultName>SimpleMvvmMultiplatform</DefaultName>
+    <Description>Multiplatform solution using Simple Mvvm Toolkit for WPF, Silverlight, Windows Store, Windows Phone, iOS and Android</Description>
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>Windows</TemplateGroupID>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Portable">
+        SimpleMvvmPortableLibrary\PortableLibrary.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Android">
+        SimpleMvvmPortableAndroid\PortableAndroid.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.iOS">
+        SimpleMvvmPortableiOS\PortableiOS.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Silverlight">
+        SimpleMvvmPortableSilverlight\PortableSilverlight.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsPhone">
+        SimpleMvvmPortableWindowsPhone\PortableWindowsPhone.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.WindowsStore">
+        SimpleMvvmPortableWindowsStore\PortableWindowsStore.vstemplate
+      </ProjectTemplateLink>
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Wpf">
+        SimpleMvvmPortableWpf\PortableWpf.vstemplate
+      </ProjectTemplateLink>
+    </ProjectCollection>
+    <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe.txt">ReadMe.txt</ProjectItem>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SimpleMvvmPortableTemplateWizard, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4</Assembly>
+    <FullClassName>SimpleMvvmPortableTemplateWizard.RootWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

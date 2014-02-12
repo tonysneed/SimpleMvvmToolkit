@@ -1,0 +1,49 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Simple Mvvm Portable Class Library</Name>
+    <Description>Portable Class Library using Simple Mvvm Toolkit for view models that target multiple platforms</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Simple Mvvm</ProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SimpleMvvmPortableLibrary</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SimpleMvvm-Portable-Library.csproj" File="SimpleMvvm-Portable-Library.csproj" ReplaceParameters="true">
+      <Folder Name="Locators" TargetFolderName="Locators">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ViewModelLocator.cs">ViewModelLocator.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Customer.cs">Customer.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICustomerServiceAgent.cs">ICustomerServiceAgent.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MockCustomerServiceAgent.cs">MockCustomerServiceAgent.cs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModels" TargetFolderName="ViewModels">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomerViewModel.cs">CustomerViewModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainPageViewModel.cs">MainPageViewModel.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension"
+              repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
+      <package id="SimpleMvvmToolkit.Portable" version="5.5.0.0" />
+    </packages>
+  </WizardData>	
+</VSTemplate>

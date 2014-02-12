@@ -1,0 +1,49 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>SimpleMvvmPortableiOS</Name>
+    <Description>Portable iOS application using Simple Mvvm Toolkit</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Simple Mvvm</ProjectSubType>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SimpleMvvmPortableiOS</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SimpleMvvm-Portable-iOS.csproj" File="SimpleMvvm-Portable-iOS.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppDelegate.cs">AppDelegate.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Entitlements.plist">Entitlements.plist</ProjectItem>
+      <Folder Name="Framework" TargetFolderName="Framework">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BindingSetup.cs">BindingSetup.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Info.plist">Info.plist</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.cs">Main.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MainStoryboard_iPad.storyboard">MainStoryboard_iPad.storyboard</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MainStoryboard_iPhone.storyboard">MainStoryboard_iPhone.storyboard</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe.txt">ReadMe.txt</ProjectItem>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Default-568h@2x.png">Default-568h@2x.png</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SimpleMvvm-iOSViewController.cs">SimpleMvvm-iOSViewController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SimpleMvvm-iOSViewController.designer.cs">SimpleMvvm-iOSViewController.designer.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SimpleMvvmPortableTemplateWizard, Version=5.0.0.0, Culture=neutral, PublicKeyToken=20fad5ed49a0c3b4</Assembly>
+    <FullClassName>SimpleMvvmPortableTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension"
+              repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
+      <package id="SimpleMvvmToolkit.Portable" version="5.5.0.0" />
+      <package id="MvvmCross.PortableSupport" version="3.1.1-beta4" />
+      <package id="MvvmCross.HotTuna.CrossCore" version="3.1.1-beta4" />
+    </packages>
+  </WizardData>	
+</VSTemplate>
