@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvvmRiaTemplateWizard", "SimpleMvvmRiaTemplateWizard\SimpleMvvmRiaTemplateWizard.csproj", "{D67905F4-360D-4101-95A3-A76CA9616276}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E5C5870F-DCB8-433B-B45D-68A5ECEC6E99}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvvmPortableTemplateWizard", "SimpleMvvmPortableTemplateWizard\SimpleMvvmPortableTemplateWizard.csproj", "{56368D6A-FDAB-416A-B845-B8789CA1DFFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleMvvmToolkit.VS2012.Deploy", "SimpleMvvmToolkit.VS2012.Deploy\SimpleMvvmToolkit.VS2012.Deploy.csproj", "{205CEEEA-A797-4DEF-868D-89E18ED22FA1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D67905F4-360D-4101-95A3-A76CA9616276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67905F4-360D-4101-95A3-A76CA9616276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67905F4-360D-4101-95A3-A76CA9616276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67905F4-360D-4101-95A3-A76CA9616276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56368D6A-FDAB-416A-B845-B8789CA1DFFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56368D6A-FDAB-416A-B845-B8789CA1DFFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56368D6A-FDAB-416A-B845-B8789CA1DFFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56368D6A-FDAB-416A-B845-B8789CA1DFFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205CEEEA-A797-4DEF-868D-89E18ED22FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205CEEEA-A797-4DEF-868D-89E18ED22FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205CEEEA-A797-4DEF-868D-89E18ED22FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205CEEEA-A797-4DEF-868D-89E18ED22FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,62 @@
+﻿<UserControl
+    x:Class="$safeprojectname$.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+    xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="900" d:DesignHeight="480"
+    DataContext="{Binding Source={StaticResource Locator}, Path=MainPageViewModel}"
+    >
+    <!-- Set the DataContext to retrieve the MainPageViewModel -->
+
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+
+        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
+
+            <!-- Bind the Source property of navigation:Frame to the SelectedPage property -->
+            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Source="{Binding SelectedPage, Mode=TwoWay}"
+                              Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+                <navigation:Frame.UriMapper>
+                    <uriMapper:UriMapper>
+                        <uriMapper:UriMapping Uri="{}" MappedUri="/Views/Home.xaml"/>
+                        <uriMapper:UriMapping Uri="{}{pageName}" MappedUri="/Views/{pageName}.xaml"/>
+                    </uriMapper:UriMapper>
+                </navigation:Frame.UriMapper>
+            </navigation:Frame>
+        </Border>
+
+        <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}">
+
+            <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
+                <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+
+                    <ContentControl Style="{StaticResource LogoIcon}"/>
+                    <TextBlock x:Name="ApplicationNameTextBlock" Style="{StaticResource ApplicationNameStyle}" 
+                               Text="Simple MVVM Application with WCF RIA Services"/>
+
+                </StackPanel>
+            </Border>
+
+            <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}">
+                <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
+                    <!-- Set CommandParamter to Home view name (without .xaml) -->
+                    <HyperlinkButton x:Name="homeLink" Style="{StaticResource LinkStyle}" 
+                                     Command="{Binding NavigateCommand}" CommandParameter="Home"
+                                     TargetName="ContentFrame" Content="home"/>
+
+                    <Rectangle x:Name="Divider1" Style="{StaticResource DividerStyle}"/>
+
+                    <!-- Set CommandParamter to view name (without .xaml) -->
+                    <HyperlinkButton x:Name="itemsLink" Style="{StaticResource LinkStyle}" 
+                                     Command="{Binding NavigateCommand}" CommandParameter="ItemListView"
+                                     TargetName="ContentFrame" Content="items"/>
+                </StackPanel>
+            </Border>
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

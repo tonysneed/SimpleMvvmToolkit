@@ -1,0 +1,59 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Simple Mvvm iOS Application</Name>
+    <Description>Xamarin iOS application using Simple Mvvm Toolkit</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>Simple Mvvm</ProjectSubType>
+    <NumberOfParentCategoriesToRollUp>2</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SimpleMvvmiOS</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="SimpleMvvm-iOS.csproj" File="SimpleMvvm-iOS.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AppDelegate.cs">AppDelegate.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Entitlements.plist">Entitlements.plist</ProjectItem>
+      <Folder Name="Framework" TargetFolderName="Framework">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BindingSetup.cs">BindingSetup.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Info.plist">Info.plist</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Main.cs">Main.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MainStoryboard_iPad.storyboard">MainStoryboard_iPad.storyboard</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MainStoryboard_iPhone.storyboard">MainStoryboard_iPhone.storyboard</ProjectItem>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Customer.cs">Customer.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ReadMe.txt">ReadMe.txt</ProjectItem>
+      <Folder Name="Resources" TargetFolderName="Resources">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Default-568h@2x.png">Default-568h@2x.png</ProjectItem>
+      </Folder>
+      <Folder Name="Services" TargetFolderName="Services">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICustomerServiceAgent.cs">ICustomerServiceAgent.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="MockCustomerServiceAgent.cs">MockCustomerServiceAgent.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SimpleMvvm-iOSViewController.cs">SimpleMvvm-iOSViewController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="SimpleMvvm-iOSViewController.designer.cs">SimpleMvvm-iOSViewController.designer.cs</ProjectItem>
+      <Folder Name="ViewModels" TargetFolderName="ViewModels">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CustomerViewModel.cs">CustomerViewModel.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="extension"
+              repositoryId="SimpleMvvmToolkit.VS2013..fa30ad3a-2cfc-4931-8d0c-557ed21497d3">
+      <package id="SimpleMvvmToolkit" version="5.5.0.0" />
+      <package id="MvvmCross.PortableSupport" version="3.1.1-beta4" />
+      <package id="MvvmCross.HotTuna.CrossCore" version="3.1.1-beta4" />
+    </packages>
+  </WizardData>	
+</VSTemplate>

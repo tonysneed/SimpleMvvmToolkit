@@ -1,0 +1,70 @@
+Release Notes for Simple Mvvm Toolkit v5.5.0.1
+
+There are two main enhancements for this release:
+1. Support for iOS and Android platforms with Xamarin and Mvvm Cross
+   - Simple Mvvm can now be used to develop applications deployed to both
+     iOS and Android platforms by using the Xamarin tool chain and the
+     Mvvm Cross Core NuGet package.
+   - The capabilities are on a par with Windows Store apps with support for
+     INotifyPropertyChanges and INotifyDataErrorInfo
+     > MessageBus, ModelBase, ViewModelBase, ViewModelDetailBase are linked
+       from the Silverlight project (just like WPF)
+   - However, there is no support for IsInDesignMode.
+   - Also missing is support for transparent thread marshalling.
+     With PCL and C# async/await supported by Xamarin, there is really no need
+     for this feature in iOS and Android projects.
+   - Both the Simple Mvvm iOS and Android projects contain ReadMe files with
+     detailed instructions for replicating the sample.
+     > You should install Xamarin Studio for both Mac and Windows
+     > At this time, the MvvmCross NuGet package v3.1.1. is in beta, so you
+       may want to update the package to the latest version.
+     > The iOS project uses storyboards for GUI designer support with the version
+       of Xamarin Studio available on the Alpha channel
+     
+ 2. Support for creating portable models, view models, service agents and locators
+    in a Portable Class Library that can be referenced by multiple platform projects,
+    including WPF 4.5 or higher, Silverlight 5, Windows Store 8 or higher,
+    Windows Phone 8, iOS (MonoTouch) and Android (MonoDriod)
+	- There is a Simple Mvvm Portable library project template that creates a Portable
+	  Class Library Project with the Portable Simple Mvvm Toolkit NuGet package.
+	- In addition, there is also a Simple Mvvm Multiplatform template that includes
+	  the Simple Mvvm Portable Library, as well as project templates for each target
+	  platform.
+    - There is no UIDispatcher, because UI-thread dispatching is not portable
+      > Instead you can use the Task class with C# async/await keywords
+    - Validation with INotifyDataErrorInfo is supported
+      > But the portable version of Simple Mvvm uses the Windows Phone implementation,
+        which is portable across all platforms, because it does not reference
+        System.ComponentModel.DataAnnotations
+    - Use of the MessageBus for inter-ViewModel communication is fully supported,
+      as are other features of Simple Mvvm, such as IEditableObject, which resides in
+      SimpleMvvmToolkit-Common and is portable across platforms
+ 
+ 3. Other changes are listed below:
+    - With this released I've dropped the dependency on the Microsoft.Composition
+      NuGet package for Windows Store applications. There are better IOC containers
+      out there than MEF, which has undergone some changes that make it less desireable
+      for this purpose.
+    - Item Templates are now included for for Windows Store projects, as well as for
+      iOS and Android projects
+	  > The Injected ViewModel Locator item template has now been deprecated
+	- Both .NET 4.5 and 4.51 are supported by the toolkit and NuGet packages
+	- v5.5.0.1 of the VSIX installer added back support for snippets for CSharp code
+	  and XAML. Note that if you are using ReSharper, you will need to select
+	  RESHARPER, Options, Environment, Intellisense, General, and select Visual Studio.
+	  In XAML press Ctrl+K, Ctrl+X to view and insert the Mvvm snippets. In C# code you
+	  can simply type the snippet shortcut (for ex, mvvmprop) and press Tab.
+ 
+ 4. Known issues:
+    - For some reason XAML parsing errors may appear in the Windows Store and Windows Phone
+      sample projects, but the applications build and deploy normally.
+      > This may be remedied by uninstalling and reinstalling the Windows Store and Phone
+        SDK's after installing Xamarin for Windows
+    - The Visual Studio support for Xamarin is based on a "Business" level license,
+      which may be out of reach financially for some developers.
+      > Instead use the free Xamarin Studio for Windows and Mac
+      > XS for Windows can be used for Android development only
+      > Without the biz license and VS integration, you will need to use XS for Mac
+        in order to develop iOS applications.
+        
+        
