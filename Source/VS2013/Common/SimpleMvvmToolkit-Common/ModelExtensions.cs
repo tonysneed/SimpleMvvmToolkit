@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Runtime.Serialization;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace SimpleMvvmToolkit.ModelExtensions
 {
@@ -13,12 +14,29 @@ namespace SimpleMvvmToolkit.ModelExtensions
     public static class Extensions
     {
         /// <summary>
-        /// Performs a deep copy using DatacontractSerializer.
+        /// Performs a deep copy using Json Serializer.
         /// </summary>
         /// <typeparam name="T">Entity type</typeparam>
         /// <param name="obj">Entity object</param>
         /// <returns>Cloned entity</returns>
         public static T Clone<T>(this T obj)
+        {
+            var settings = new JsonSerializerSettings
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.All
+            };
+            var json = JsonConvert.SerializeObject(obj, settings);
+            var result = JsonConvert.DeserializeObject<T>(json, settings);
+            return result;
+        }
+
+        /// <summary>
+        /// Performs a deep copy using DatacontractSerializer.
+        /// </summary>
+        /// <typeparam name="T">Entity type</typeparam>
+        /// <param name="obj">Entity object</param>
+        /// <returns>Cloned entity</returns>
+        public static T CloneXml<T>(this T obj)
         {
             T copy;
             using (var stream = new MemoryStream())

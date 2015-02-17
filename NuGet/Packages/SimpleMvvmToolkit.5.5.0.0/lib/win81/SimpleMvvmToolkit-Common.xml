@@ -352,6 +352,14 @@
         </member>
         <member name="M:SimpleMvvmToolkit.ModelExtensions.Extensions.Clone``1(``0)">
             <summary>
+            Performs a deep copy using Json Serializer.
+            </summary>
+            <typeparam name="T">Entity type</typeparam>
+            <param name="obj">Entity object</param>
+            <returns>Cloned entity</returns>
+        </member>
+        <member name="M:SimpleMvvmToolkit.ModelExtensions.Extensions.CloneXml``1(``0)">
+            <summary>
             Performs a deep copy using DatacontractSerializer.
             </summary>
             <typeparam name="T">Entity type</typeparam>
