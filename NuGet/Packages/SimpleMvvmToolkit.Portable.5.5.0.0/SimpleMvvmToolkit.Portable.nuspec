@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>SimpleMvvmToolkit.Portable</id>
-		    <version>5.5.0.0</version>
+		    <version>5.5.0.1</version>
         <title>Portable Simple Mvvm Toolkit</title>
         <authors>Tony Sneed</authors>
         <owners>Tony Sneed</owners>
@@ -13,5 +13,8 @@
         <description>Helper classes for building Portable Class Libraries that use the the Model-View-ViewModel pattern and can be deployed to all the following platforms: WPF, Silverlight, Windows Store, Windows Phone, iOS and Android.</description>
         <language>en-US</language>
         <tags>mvvm simplemvvm wpf silverlight windowsstore win8 winrt windowsphone wp8 ios android xamarin</tags>
+        <dependencies>
+          <dependency id="Newtonsoft.Json" version="6.0.8" />
+        </dependencies>
     </metadata>
 </package>
