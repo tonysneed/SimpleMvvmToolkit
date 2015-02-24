@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Linq;
 using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.Serialization;
-using System.Collections.Generic;
-using System.Threading;
+using Newtonsoft.Json;
 
 namespace SimpleMvvmToolkit
 {
@@ -17,6 +15,7 @@ namespace SimpleMvvmToolkit
     /// implementing INotifyPropertyChanged with a lambda expression.
     /// </summary>
     /// <typeparam name="TModel">Class inheriting from ModelBase</typeparam>
+    [JsonObject(IsReference = true)]
     [DataContract(IsReference = true)]
     public abstract class ModelBaseCore<TModel> : INotifyPropertyChanged
     {
