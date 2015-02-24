@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>SimpleMvvmToolkit</id>
-		    <version>5.0.1.0</version>
+		    <version>5.0.0.0</version>
         <title>Simple Mvvm Toolkit</title>
         <authors>Tony Sneed</authors>
         <owners>Tony Sneed</owners>
